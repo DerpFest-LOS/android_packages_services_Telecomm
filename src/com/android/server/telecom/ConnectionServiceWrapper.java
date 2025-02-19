@@ -1670,9 +1670,6 @@ public class ConnectionServiceWrapper extends ServiceBinder implements
                     }
                 } else {
                     Log.w(this, "createConference: Scheduled executor is null or shutdown");
-                    mAnomalyReporter.reportAnomaly(
-                        NULL_SCHEDULED_EXECUTOR_ERROR_UUID,
-                        NULL_SCHEDULED_EXECUTOR_ERROR_MSG);
                 }
                 try {
                     mServiceInterface.createConference(
@@ -1812,9 +1809,6 @@ public class ConnectionServiceWrapper extends ServiceBinder implements
                     }
                 } else {
                     Log.w(this, "createConnection: Scheduled executor is null or shutdown");
-                    mAnomalyReporter.reportAnomaly(
-                        NULL_SCHEDULED_EXECUTOR_ERROR_UUID,
-                        NULL_SCHEDULED_EXECUTOR_ERROR_MSG);
                 }
                 try {
                     if (mFlags.cswServiceInterfaceIsNull() && mServiceInterface == null) {
